@@ -9,7 +9,7 @@
 // Use of this source code is governed by the UniDoc End User License Agreement
 // terms that can be accessed at https://unidoc.io/eula/
 
-package sampling ;import (_dd "github.com/unidoc/unipdf/v3/internal/bitwise";_a "github.com/unidoc/unipdf/v3/internal/imageutil";_e "io";);func ResampleBytes (data []byte ,bitsPerSample int )[]uint32 {var _da []uint32 ;_daf :=bitsPerSample ;var _ff uint32 ;
+package sampling ;import (_dd "github.com/laduygaga/unipdf/v3/internal/bitwise";_a "github.com/laduygaga/unipdf/v3/internal/imageutil";_e "io";);func ResampleBytes (data []byte ,bitsPerSample int )[]uint32 {var _da []uint32 ;_daf :=bitsPerSample ;var _ff uint32 ;
 var _fb byte ;_de :=0;_df :=0;_daa :=0;for _daa < len (data ){if _de > 0{_ae :=_de ;if _daf < _ae {_ae =_daf ;};_ff =(_ff <<uint (_ae ))|uint32 (_fb >>uint (8-_ae ));_de -=_ae ;if _de > 0{_fb =_fb <<uint (_ae );}else {_fb =0;};_daf -=_ae ;if _daf ==0{_da =append (_da ,_ff );
 _daf =bitsPerSample ;_ff =0;_df ++;};}else {_ed :=data [_daa ];_daa ++;_gab :=8;if _daf < _gab {_gab =_daf ;};_de =8-_gab ;_ff =(_ff <<uint (_gab ))|uint32 (_ed >>uint (_de ));if _gab < 8{_fb =_ed <<uint (_gab );};_daf -=_gab ;if _daf ==0{_da =append (_da ,_ff );
 _daf =bitsPerSample ;_ff =0;_df ++;};};};for _de >=bitsPerSample {_fg :=_de ;if _daf < _fg {_fg =_daf ;};_ff =(_ff <<uint (_fg ))|uint32 (_fb >>uint (8-_fg ));_de -=_fg ;if _de > 0{_fb =_fb <<uint (_fg );}else {_fb =0;};_daf -=_fg ;if _daf ==0{_da =append (_da ,_ff );

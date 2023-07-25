@@ -10,8 +10,8 @@
 // terms that can be accessed at https://unidoc.io/eula/
 
 // Package sighandler implements digital signature handlers for PDF signature validation and signing.
-package sighandler ;import (_dea "bytes";_f "crypto";_fg "crypto/rand";_ag "crypto/rsa";_e "crypto/x509";_fc "crypto/x509/pkix";_g "encoding/asn1";_de "errors";_af "fmt";_cg "github.com/unidoc/pkcs7";_cd "github.com/unidoc/timestamp";_ea "github.com/unidoc/unipdf/v3/core";
-_dd "github.com/unidoc/unipdf/v3/model";_eb "github.com/unidoc/unipdf/v3/model/mdp";_deg "github.com/unidoc/unipdf/v3/model/sigutil";_b "hash";_a "math/big";_c "time";);
+package sighandler ;import (_dea "bytes";_f "crypto";_fg "crypto/rand";_ag "crypto/rsa";_e "crypto/x509";_fc "crypto/x509/pkix";_g "encoding/asn1";_de "errors";_af "fmt";_cg "github.com/unidoc/pkcs7";_cd "github.com/unidoc/timestamp";_ea "github.com/laduygaga/unipdf/v3/core";
+_dd "github.com/laduygaga/unipdf/v3/model";_eb "github.com/laduygaga/unipdf/v3/model/mdp";_deg "github.com/laduygaga/unipdf/v3/model/sigutil";_b "hash";_a "math/big";_c "time";);
 
 // NewAdobePKCS7Detached creates a new Adobe.PPKMS/Adobe.PPKLite adbe.pkcs7.detached signature handler.
 // Both parameters may be nil for the signature validation.

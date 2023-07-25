@@ -14,7 +14,7 @@
 // page content streams and XObject forms and thus also in annotation appearance streams.
 //
 // Also defines utility functions for drawing common shapes such as rectangles, lines and circles (ovals).
-package draw ;import (_eb "fmt";_cd "github.com/unidoc/unipdf/v3/contentstream";_ad "github.com/unidoc/unipdf/v3/core";_b "github.com/unidoc/unipdf/v3/internal/transform";_a "github.com/unidoc/unipdf/v3/model";_c "math";);
+package draw ;import (_eb "fmt";_cd "github.com/laduygaga/unipdf/v3/contentstream";_ad "github.com/laduygaga/unipdf/v3/core";_b "github.com/laduygaga/unipdf/v3/internal/transform";_a "github.com/laduygaga/unipdf/v3/model";_c "math";);
 
 // Length returns the number of points in the path.
 func (_cad Path )Length ()int {return len (_cad .Points )};

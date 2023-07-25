@@ -9,8 +9,8 @@
 // Use of this source code is governed by the UniDoc End User License Agreement
 // terms that can be accessed at https://unidoc.io/eula/
 
-package redactor ;import (_bb "errors";_b "fmt";_a "github.com/unidoc/unipdf/v3/common";_ag "github.com/unidoc/unipdf/v3/contentstream";_abf "github.com/unidoc/unipdf/v3/core";_dd "github.com/unidoc/unipdf/v3/creator";_g "github.com/unidoc/unipdf/v3/extractor";
-_ab "github.com/unidoc/unipdf/v3/model";_fa "io";_f "regexp";_d "sort";_e "strings";);
+package redactor ;import (_bb "errors";_b "fmt";_a "github.com/laduygaga/unipdf/v3/common";_ag "github.com/laduygaga/unipdf/v3/contentstream";_abf "github.com/laduygaga/unipdf/v3/core";_dd "github.com/laduygaga/unipdf/v3/creator";_g "github.com/laduygaga/unipdf/v3/extractor";
+_ab "github.com/laduygaga/unipdf/v3/model";_fa "io";_f "regexp";_d "sort";_e "strings";);
 
 // Redact executes the redact operation on a pdf file and updates the content streams of all pages of the file.
 func (_bfga *Redactor )Redact ()error {_bbc ,_bbca :=_bfga ._afb .GetNumPages ();if _bbca !=nil {return _b .Errorf ("\u0066\u0061\u0069\u006c\u0065\u0064 \u0074\u006f\u0020\u0067\u0065\u0074\u0020\u0074\u0068\u0065\u0020\u006e\u0075m\u0062\u0065\u0072\u0020\u006f\u0066\u0020P\u0061\u0067\u0065\u0073");

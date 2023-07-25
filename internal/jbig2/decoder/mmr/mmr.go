@@ -9,7 +9,7 @@
 // Use of this source code is governed by the UniDoc End User License Agreement
 // terms that can be accessed at https://unidoc.io/eula/
 
-package mmr ;import (_g "errors";_d "fmt";_ag "github.com/unidoc/unipdf/v3/common";_c "github.com/unidoc/unipdf/v3/internal/bitwise";_b "github.com/unidoc/unipdf/v3/internal/jbig2/bitmap";_a "io";);func (_fcg *Decoder )UncompressMMR ()(_ad *_b .Bitmap ,_gbe error ){_ad =_b .New (_fcg ._ggg ,_fcg ._bg );
+package mmr ;import (_g "errors";_d "fmt";_ag "github.com/laduygaga/unipdf/v3/common";_c "github.com/laduygaga/unipdf/v3/internal/bitwise";_b "github.com/laduygaga/unipdf/v3/internal/jbig2/bitmap";_a "io";);func (_fcg *Decoder )UncompressMMR ()(_ad *_b .Bitmap ,_gbe error ){_ad =_b .New (_fcg ._ggg ,_fcg ._bg );
 _cg :=make ([]int ,_ad .Width +5);_add :=make ([]int ,_ad .Width +5);_add [0]=_ad .Width ;_ecc :=1;var _cgc int ;for _fcf :=0;_fcf < _ad .Height ;_fcf ++{_cgc ,_gbe =_fcg .uncompress2d (_fcg ._gaa ,_add ,_ecc ,_cg ,_ad .Width );if _gbe !=nil {return nil ,_gbe ;
 };if _cgc ==EOF {break ;};if _cgc > 0{_gbe =_fcg .fillBitmap (_ad ,_fcf ,_cg ,_cgc );if _gbe !=nil {return nil ,_gbe ;};};_add ,_cg =_cg ,_add ;_ecc =_cgc ;};if _gbe =_fcg .detectAndSkipEOL ();_gbe !=nil {return nil ,_gbe ;};_fcg ._gaa .align ();return _ad ,nil ;
 };func (_bd *code )String ()string {return _d .Sprintf ("\u0025\u0064\u002f\u0025\u0064\u002f\u0025\u0064",_bd ._ab ,_bd ._gg ,_bd ._fa );};func (_be *Decoder )fillBitmap (_ef *_b .Bitmap ,_egd int ,_dff []int ,_addg int )error {var _gdeb byte ;_ed :=0;

@@ -9,7 +9,7 @@
 // Use of this source code is governed by the UniDoc End User License Agreement
 // terms that can be accessed at https://unidoc.io/eula/
 
-package decoder ;import (_f "github.com/unidoc/unipdf/v3/internal/bitwise";_c "github.com/unidoc/unipdf/v3/internal/jbig2/bitmap";_fe "github.com/unidoc/unipdf/v3/internal/jbig2/document";_b "github.com/unidoc/unipdf/v3/internal/jbig2/errors";_a "image";
+package decoder ;import (_f "github.com/laduygaga/unipdf/v3/internal/bitwise";_c "github.com/laduygaga/unipdf/v3/internal/jbig2/bitmap";_fe "github.com/laduygaga/unipdf/v3/internal/jbig2/document";_b "github.com/laduygaga/unipdf/v3/internal/jbig2/errors";_a "image";
 );func (_d *Decoder )DecodePage (pageNumber int )([]byte ,error ){return _d .decodePage (pageNumber )};type Decoder struct{_e *_f .Reader ;_fb *_fe .Document ;_bg int ;_cf Parameters ;};func Decode (input []byte ,parameters Parameters ,globals *_fe .Globals )(*Decoder ,error ){_cc :=_f .NewReader (input );
 _bf ,_cg :=_fe .DecodeDocument (_cc ,globals );if _cg !=nil {return nil ,_cg ;};return &Decoder {_e :_cc ,_fb :_bf ,_cf :parameters },nil ;};func (_bc *Decoder )decodePage (_ed int )([]byte ,error ){const _ae ="\u0064\u0065\u0063\u006f\u0064\u0065\u0050\u0061\u0067\u0065";
 if _ed < 0{return nil ,_b .Errorf (_ae ,"\u0069n\u0076\u0061\u006c\u0069d\u0020\u0070\u0061\u0067\u0065 \u006eu\u006db\u0065\u0072\u003a\u0020\u0027\u0025\u0064'",_ed );};if _ed > int (_bc ._fb .NumberOfPages ){return nil ,_b .Errorf (_ae ,"p\u0061\u0067\u0065\u003a\u0020\u0027%\u0064\u0027\u0020\u006e\u006f\u0074 \u0066\u006f\u0075\u006e\u0064\u0020\u0069n\u0020\u0074\u0068\u0065\u0020\u0064\u0065\u0063\u006f\u0064e\u0072",_ed );

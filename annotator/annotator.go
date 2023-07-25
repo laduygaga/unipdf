@@ -14,8 +14,8 @@
 // can create the appearance streams which specify the exact appearance as needed by many pdf viewers for consistent
 // appearance of the annotations.
 // It also contains methods for generating appearance streams for fields via widget annotations.
-package annotator ;import (_d "bytes";_eg "errors";_g "github.com/unidoc/unipdf/v3/common";_c "github.com/unidoc/unipdf/v3/contentstream";_b "github.com/unidoc/unipdf/v3/contentstream/draw";_cb "github.com/unidoc/unipdf/v3/core";_e "github.com/unidoc/unipdf/v3/internal/textencoding";
-_cef "github.com/unidoc/unipdf/v3/model";_cec "image";_ce "math";_ff "strings";_gc "unicode";);
+package annotator ;import (_d "bytes";_eg "errors";_g "github.com/laduygaga/unipdf/v3/common";_c "github.com/laduygaga/unipdf/v3/contentstream";_b "github.com/laduygaga/unipdf/v3/contentstream/draw";_cb "github.com/laduygaga/unipdf/v3/core";_e "github.com/laduygaga/unipdf/v3/internal/textencoding";
+_cef "github.com/laduygaga/unipdf/v3/model";_cec "image";_ce "math";_ff "strings";_gc "unicode";);
 
 // AppearanceStyle defines style parameters for appearance stream generation.
 type AppearanceStyle struct{

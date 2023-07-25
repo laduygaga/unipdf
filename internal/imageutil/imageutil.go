@@ -9,7 +9,7 @@
 // Use of this source code is governed by the UniDoc End User License Agreement
 // terms that can be accessed at https://unidoc.io/eula/
 
-package imageutil ;import (_fa "encoding/binary";_b "errors";_ef "fmt";_ee "github.com/unidoc/unipdf/v3/common";_c "github.com/unidoc/unipdf/v3/internal/bitwise";_e "image";_da "image/color";_bb "image/draw";_d "math";);func _cfbgb (_abca *Monochrome ,_edeb ,_ded ,_dedg ,_dgefg int ,_bdbc RasterOperator ,_fgfg *Monochrome ,_cgab ,_deaa int )error {var (_dgb bool ;
+package imageutil ;import (_fa "encoding/binary";_b "errors";_ef "fmt";_ee "github.com/laduygaga/unipdf/v3/common";_c "github.com/laduygaga/unipdf/v3/internal/bitwise";_e "image";_da "image/color";_bb "image/draw";_d "math";);func _cfbgb (_abca *Monochrome ,_edeb ,_ded ,_dedg ,_dgefg int ,_bdbc RasterOperator ,_fgfg *Monochrome ,_cgab ,_deaa int )error {var (_dgb bool ;
 _fbe bool ;_dfef byte ;_ffafg int ;_ebec int ;_bagba int ;_eead int ;_ecegg bool ;_fede int ;_baeab int ;_dbge int ;_bacc bool ;_eaafa byte ;_abff int ;_daae int ;_dedb int ;_eaggg byte ;_adgb int ;_egdaa int ;_acecc uint ;_cbce uint ;_cbfg byte ;_effbc shift ;
 _eeeaf bool ;_acg bool ;_fbef ,_bfge int ;);if _cgab &7!=0{_egdaa =8-(_cgab &7);};if _edeb &7!=0{_ebec =8-(_edeb &7);};if _egdaa ==0&&_ebec ==0{_cbfg =_baf [0];}else {if _ebec > _egdaa {_acecc =uint (_ebec -_egdaa );}else {_acecc =uint (8-(_egdaa -_ebec ));
 };_cbce =8-_acecc ;_cbfg =_baf [_acecc ];};if (_edeb &7)!=0{_dgb =true ;_ffafg =8-(_edeb &7);_dfef =_baf [_ffafg ];_bagba =_abca .BytesPerLine *_ded +(_edeb >>3);_eead =_fgfg .BytesPerLine *_deaa +(_cgab >>3);_adgb =8-(_cgab &7);if _ffafg > _adgb {_effbc =_abgf ;

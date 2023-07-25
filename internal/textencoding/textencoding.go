@@ -9,8 +9,8 @@
 // Use of this source code is governed by the UniDoc End User License Agreement
 // terms that can be accessed at https://unidoc.io/eula/
 
-package textencoding ;import (_ga "bytes";_d "encoding/binary";_a "errors";_cc "fmt";_ab "github.com/unidoc/unipdf/v3/common";_f "github.com/unidoc/unipdf/v3/core";_ebd "github.com/unidoc/unipdf/v3/internal/cmap";_af "github.com/unidoc/unipdf/v3/internal/strutils";
-_cb "github.com/unidoc/unipdf/v3/internal/textencoding/internal/syncmap";_ce "golang.org/x/text/encoding";_eb "golang.org/x/text/transform";_dc "golang.org/x/xerrors";_gd "regexp";_cf "sort";_ca "strconv";_e "strings";_ge "sync";_c "unicode";_b "unicode/utf8";
+package textencoding ;import (_ga "bytes";_d "encoding/binary";_a "errors";_cc "fmt";_ab "github.com/laduygaga/unipdf/v3/common";_f "github.com/laduygaga/unipdf/v3/core";_ebd "github.com/laduygaga/unipdf/v3/internal/cmap";_af "github.com/laduygaga/unipdf/v3/internal/strutils";
+_cb "github.com/laduygaga/unipdf/v3/internal/textencoding/internal/syncmap";_ce "golang.org/x/text/encoding";_eb "golang.org/x/text/transform";_dc "golang.org/x/xerrors";_gd "regexp";_cf "sort";_ca "strconv";_e "strings";_ge "sync";_c "unicode";_b "unicode/utf8";
 );type simpleEncoder struct{_dee *_cb .RuneByteMap };func (_aec *simpleEncodersMap )Range (f func (_fgc string ,_faba func ()SimpleEncoder )(_cdcf bool )){_aec ._efbg .RLock ();defer _aec ._efbg .RUnlock ();for _ecb ,_egd :=range _aec ._adae {if f (_ecb ,_egd ){break ;
 };};};func (_caf *charCodeGlyphNameMap )RangeDelete (f func (_ff CharCode ,_caa GlyphName )(_fc bool ,_ceb bool )){_caf ._fd .Lock ();defer _caf ._fd .Unlock ();for _ede ,_bb :=range _caf ._gc {_dcb ,_bc :=f (_ede ,_bb );if _dcb {delete (_caf ._gc ,_ede );
 };if _bc {break ;};};};type charCodeGlyphNameMap struct{_gc map[CharCode ]GlyphName ;_fd _ge .RWMutex ;};var _dbb =_cb .NewStringsMap (_abg [:]);func (_fgf *differencesEncoding )CharcodeToRune (code CharCode )(rune ,bool ){if code > 0xff{return MissingCodeRune ,false ;

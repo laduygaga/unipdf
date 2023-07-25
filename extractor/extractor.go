@@ -13,8 +13,8 @@
 // Package extractor is used for quickly extracting PDF content through a simple interface.
 // Currently offers functionality for extracting textual content.
 //
-package extractor ;import (_fa "bytes";_b "errors";_gb "fmt";_eb "github.com/unidoc/unipdf/v3/common";_fcb "github.com/unidoc/unipdf/v3/contentstream";_c "github.com/unidoc/unipdf/v3/core";_eae "github.com/unidoc/unipdf/v3/internal/license";_gg "github.com/unidoc/unipdf/v3/internal/textencoding";
-_ecd "github.com/unidoc/unipdf/v3/internal/transform";_ec "github.com/unidoc/unipdf/v3/model";_ad "golang.org/x/image/draw";_da "golang.org/x/text/unicode/norm";_bb "golang.org/x/xerrors";_d "image";_gcg "image/color";_f "io";_fb "math";_fc "reflect";_e "regexp";
+package extractor ;import (_fa "bytes";_b "errors";_gb "fmt";_eb "github.com/laduygaga/unipdf/v3/common";_fcb "github.com/laduygaga/unipdf/v3/contentstream";_c "github.com/laduygaga/unipdf/v3/core";_eae "github.com/laduygaga/unipdf/v3/internal/license";_gg "github.com/laduygaga/unipdf/v3/internal/textencoding";
+_ecd "github.com/laduygaga/unipdf/v3/internal/transform";_ec "github.com/laduygaga/unipdf/v3/model";_ad "golang.org/x/image/draw";_da "golang.org/x/text/unicode/norm";_bb "golang.org/x/xerrors";_d "image";_gcg "image/color";_f "io";_fb "math";_fc "reflect";_e "regexp";
 _gc "sort";_a "strings";_ge "unicode";_ea "unicode/utf8";);func _dfa (_gbbe _ecd .Point )_ecd .Matrix {return _ecd .TranslationMatrix (_gbbe .X ,_gbbe .Y )};func (_fadb paraList )reorder (_bcff []int ){_aeff :=make (paraList ,len (_fadb ));for _dcfa ,_aaecc :=range _bcff {_aeff [_dcfa ]=_fadb [_aaecc ];
 };copy (_fadb ,_aeff );};func (_egea *wordBag )getDepthIdx (_dbdg float64 )int {_adcd :=_egea .depthIndexes ();_gacg :=_dac (_dbdg );if _gacg < _adcd [0]{return _adcd [0];};if _gacg > _adcd [len (_adcd )-1]{return _adcd [len (_adcd )-1];};return _gacg ;
 };func (_gadbf *textPara )toTextMarks (_bcga *int )[]TextMark {if _gadbf ._ffbc ==nil {return _gadbf .toCellTextMarks (_bcga );};var _cfge []TextMark ;for _acac :=0;_acac < _gadbf ._ffbc ._fgbf ;_acac ++{for _gebae :=0;_gebae < _gadbf ._ffbc ._eegaf ;_gebae ++{_dbae :=_gadbf ._ffbc .get (_gebae ,_acac );

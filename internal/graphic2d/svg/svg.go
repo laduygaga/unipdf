@@ -9,7 +9,7 @@
 // Use of this source code is governed by the UniDoc End User License Agreement
 // terms that can be accessed at https://unidoc.io/eula/
 
-package svg ;import (_cd "encoding/xml";_g "fmt";_cg "github.com/unidoc/unipdf/v3/common";_f "github.com/unidoc/unipdf/v3/contentstream";_ag "github.com/unidoc/unipdf/v3/contentstream/draw";_b "github.com/unidoc/unipdf/v3/internal/graphic2d";_gda "golang.org/x/net/html/charset";
+package svg ;import (_cd "encoding/xml";_g "fmt";_cg "github.com/laduygaga/unipdf/v3/common";_f "github.com/laduygaga/unipdf/v3/contentstream";_ag "github.com/laduygaga/unipdf/v3/contentstream/draw";_b "github.com/laduygaga/unipdf/v3/internal/graphic2d";_gda "golang.org/x/net/html/charset";
 _e "io";_gd "math";_ae "os";_ad "strconv";_a "strings";_d "unicode";);func _dd (_dag *GraphicSVG ,_fe *_f .ContentCreator ){_fe .Add_q ();_dag .Style .toContentStream (_fe );_cde ,_ebdb :=_bfb (_dag .Attributes ["\u0070\u006f\u0069\u006e\u0074\u0073"]);
 if _ebdb !=nil {_cg .Log .Debug ("\u0045\u0052\u0052O\u0052\u0020\u0075\u006e\u0061\u0062\u006c\u0065\u0020\u0074\u006f\u0020\u0070\u0061\u0072\u0073\u0065\u0020\u0070\u006f\u0069\u006e\u0074\u0073\u0020\u0061\u0074\u0074\u0072i\u0062\u0075\u0074\u0065\u003a\u0020\u0025\u0076",_ebdb );
 return ;};if len (_cde )%2> 0{_cg .Log .Debug ("\u0045\u0052R\u004f\u0052\u0020\u0069n\u0076\u0061l\u0069\u0064\u0020\u0070\u006f\u0069\u006e\u0074s\u0020\u0061\u0074\u0074\u0072\u0069\u0062\u0075\u0074\u0065\u0020\u006ce\u006e\u0067\u0074\u0068");return ;

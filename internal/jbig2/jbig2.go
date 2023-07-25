@@ -9,8 +9,8 @@
 // Use of this source code is governed by the UniDoc End User License Agreement
 // terms that can be accessed at https://unidoc.io/eula/
 
-package jbig2 ;import (_b "github.com/unidoc/unipdf/v3/internal/bitwise";_g "github.com/unidoc/unipdf/v3/internal/jbig2/decoder";_a "github.com/unidoc/unipdf/v3/internal/jbig2/document";_bb "github.com/unidoc/unipdf/v3/internal/jbig2/document/segments";
-_c "github.com/unidoc/unipdf/v3/internal/jbig2/errors";_be "sort";);func DecodeGlobals (encoded []byte )(Globals ,error ){const _ff ="\u0044\u0065\u0063\u006f\u0064\u0065\u0047\u006c\u006f\u0062\u0061\u006c\u0073";_ac :=_b .NewReader (encoded );_cgg ,_adf :=_a .DecodeDocument (_ac ,nil );
+package jbig2 ;import (_b "github.com/laduygaga/unipdf/v3/internal/bitwise";_g "github.com/laduygaga/unipdf/v3/internal/jbig2/decoder";_a "github.com/laduygaga/unipdf/v3/internal/jbig2/document";_bb "github.com/laduygaga/unipdf/v3/internal/jbig2/document/segments";
+_c "github.com/laduygaga/unipdf/v3/internal/jbig2/errors";_be "sort";);func DecodeGlobals (encoded []byte )(Globals ,error ){const _ff ="\u0044\u0065\u0063\u006f\u0064\u0065\u0047\u006c\u006f\u0062\u0061\u006c\u0073";_ac :=_b .NewReader (encoded );_cgg ,_adf :=_a .DecodeDocument (_ac ,nil );
 if _adf !=nil {return nil ,_c .Wrap (_adf ,_ff ,"");};if _cgg .GlobalSegments ==nil ||(_cgg .GlobalSegments .Segments ==nil ){return nil ,_c .Error (_ff ,"\u006eo\u0020\u0067\u006c\u006f\u0062\u0061\u006c\u0020\u0073\u0065\u0067m\u0065\u006e\u0074\u0073\u0020\u0066\u006f\u0075\u006e\u0064");
 };_de :=Globals {};for _ ,_eb :=range _cgg .GlobalSegments .Segments {_de [int (_eb .SegmentNumber )]=_eb ;};return _de ,nil ;};func (_ca Globals )ToDocumentGlobals ()*_a .Globals {if _ca ==nil {return nil ;};_fd :=[]*_bb .Header {};for _ ,_deg :=range _ca {_fd =append (_fd ,_deg );
 };_be .Slice (_fd ,func (_fg ,_ee int )bool {return _fd [_fg ].SegmentNumber < _fd [_ee ].SegmentNumber });return &_a .Globals {Segments :_fd };};type Globals map[int ]*_bb .Header ;func DecodeBytes (encoded []byte ,parameters _g .Parameters ,globals ...Globals )([]byte ,error ){var _ad Globals ;

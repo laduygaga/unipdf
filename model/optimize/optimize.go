@@ -9,8 +9,8 @@
 // Use of this source code is governed by the UniDoc End User License Agreement
 // terms that can be accessed at https://unidoc.io/eula/
 
-package optimize ;import (_a "bytes";_dg "crypto/md5";_ec "errors";_c "github.com/unidoc/unipdf/v3/common";_bdb "github.com/unidoc/unipdf/v3/contentstream";_ge "github.com/unidoc/unipdf/v3/core";_cc "github.com/unidoc/unipdf/v3/extractor";_b "github.com/unidoc/unipdf/v3/internal/imageutil";
-_ce "github.com/unidoc/unipdf/v3/internal/textencoding";_g "github.com/unidoc/unipdf/v3/model";_bd "github.com/unidoc/unitype";_d "golang.org/x/image/draw";_dc "math";);func _ffe (_af *_ge .PdfObjectStream )error {_aa ,_df :=_ge .DecodeStream (_af );if _df !=nil {return _df ;
+package optimize ;import (_a "bytes";_dg "crypto/md5";_ec "errors";_c "github.com/laduygaga/unipdf/v3/common";_bdb "github.com/laduygaga/unipdf/v3/contentstream";_ge "github.com/laduygaga/unipdf/v3/core";_cc "github.com/laduygaga/unipdf/v3/extractor";_b "github.com/laduygaga/unipdf/v3/internal/imageutil";
+_ce "github.com/laduygaga/unipdf/v3/internal/textencoding";_g "github.com/laduygaga/unipdf/v3/model";_bd "github.com/unidoc/unitype";_d "golang.org/x/image/draw";_dc "math";);func _ffe (_af *_ge .PdfObjectStream )error {_aa ,_df :=_ge .DecodeStream (_af );if _df !=nil {return _df ;
 };_gc :=_bdb .NewContentStreamParser (string (_aa ));_bb ,_df :=_gc .Parse ();if _df !=nil {return _df ;};_bb =_ff (_bb );_cda :=_bb .Bytes ();if len (_cda )>=len (_aa ){return nil ;};_gfg ,_df :=_ge .MakeStream (_bb .Bytes (),_ge .NewFlateEncoder ());
 if _df !=nil {return _df ;};_af .Stream =_gfg .Stream ;_af .Merge (_gfg .PdfObjectDictionary );return nil ;};
 

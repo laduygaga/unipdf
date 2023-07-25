@@ -9,7 +9,7 @@
 // Use of this source code is governed by the UniDoc End User License Agreement
 // terms that can be accessed at https://unidoc.io/eula/
 
-package cmap ;import (_eg "bufio";_d "bytes";_c "encoding/hex";_b "errors";_e "fmt";_a "github.com/unidoc/unipdf/v3/common";_fb "github.com/unidoc/unipdf/v3/core";_aa "github.com/unidoc/unipdf/v3/internal/cmap/bcmaps";_gc "io";_be "sort";_fd "strconv";
+package cmap ;import (_eg "bufio";_d "bytes";_c "encoding/hex";_b "errors";_e "fmt";_a "github.com/laduygaga/unipdf/v3/common";_fb "github.com/laduygaga/unipdf/v3/core";_aa "github.com/laduygaga/unipdf/v3/internal/cmap/bcmaps";_gc "io";_be "sort";_fd "strconv";
 _ca "strings";_f "unicode/utf16";);func (cmap *CMap )parseBfrange ()error {for {var _dggd CharCode ;_agd ,_adbd :=cmap .parseObject ();if _adbd !=nil {if _adbd ==_gc .EOF {break ;};return _adbd ;};switch _bgb :=_agd .(type ){case cmapOperand :if _bgb .Operand ==_ddbb {return nil ;
 };return _b .New ("\u0075n\u0065x\u0070\u0065\u0063\u0074\u0065d\u0020\u006fp\u0065\u0072\u0061\u006e\u0064");case cmapHexString :_dggd =_cee (_bgb );default:return _b .New ("\u0075n\u0065x\u0070\u0065\u0063\u0074\u0065\u0064\u0020\u0074\u0079\u0070\u0065");
 };var _gdd CharCode ;_agd ,_adbd =cmap .parseObject ();if _adbd !=nil {if _adbd ==_gc .EOF {break ;};return _adbd ;};switch _baab :=_agd .(type ){case cmapOperand :_a .Log .Debug ("\u0045\u0052\u0052\u004f\u0052\u003a \u0049\u006e\u0063\u006f\u006d\u0070\u006c\u0065\u0074\u0065\u0020\u0062\u0066r\u0061\u006e\u0067\u0065\u0020\u0074\u0072i\u0070\u006c\u0065\u0074");

@@ -20,8 +20,8 @@
 // be converted to a string for embedding in a PDF file.
 //
 // The contentstream package uses the core and model packages.
-package contentstream ;import (_be "bufio";_bc "bytes";_dg "encoding/hex";_b "errors";_g "fmt";_eb "github.com/unidoc/unipdf/v3/common";_ed "github.com/unidoc/unipdf/v3/core";_f "github.com/unidoc/unipdf/v3/internal/imageutil";_gc "github.com/unidoc/unipdf/v3/internal/transform";
-_ca "github.com/unidoc/unipdf/v3/model";_c "image/color";_af "image/jpeg";_a "io";_cg "math";_bb "regexp";_e "strconv";);func (_ceed *ContentStreamParser )parseString ()(*_ed .PdfObjectString ,error ){_ceed ._aeg .ReadByte ();var _eeab []byte ;_gab :=1;
+package contentstream ;import (_be "bufio";_bc "bytes";_dg "encoding/hex";_b "errors";_g "fmt";_eb "github.com/laduygaga/unipdf/v3/common";_ed "github.com/laduygaga/unipdf/v3/core";_f "github.com/laduygaga/unipdf/v3/internal/imageutil";_gc "github.com/laduygaga/unipdf/v3/internal/transform";
+_ca "github.com/laduygaga/unipdf/v3/model";_c "image/color";_af "image/jpeg";_a "io";_cg "math";_bb "regexp";_e "strconv";);func (_ceed *ContentStreamParser )parseString ()(*_ed .PdfObjectString ,error ){_ceed ._aeg .ReadByte ();var _eeab []byte ;_gab :=1;
 for {_dac ,_gffe :=_ceed ._aeg .Peek (1);if _gffe !=nil {return _ed .MakeString (string (_eeab )),_gffe ;};if _dac [0]=='\\'{_ceed ._aeg .ReadByte ();_cbbf ,_dabg :=_ceed ._aeg .ReadByte ();if _dabg !=nil {return _ed .MakeString (string (_eeab )),_dabg ;
 };if _ed .IsOctalDigit (_cbbf ){_cgc ,_aeb :=_ceed ._aeg .Peek (2);if _aeb !=nil {return _ed .MakeString (string (_eeab )),_aeb ;};var _fcdc []byte ;_fcdc =append (_fcdc ,_cbbf );for _ ,_dccg :=range _cgc {if _ed .IsOctalDigit (_dccg ){_fcdc =append (_fcdc ,_dccg );
 }else {break ;};};_ceed ._aeg .Discard (len (_fcdc )-1);_eb .Log .Trace ("\u004e\u0075\u006d\u0065ri\u0063\u0020\u0073\u0074\u0072\u0069\u006e\u0067\u0020\u0022\u0025\u0073\u0022",_fcdc );_decbc ,_aeb :=_e .ParseUint (string (_fcdc ),8,32);if _aeb !=nil {return _ed .MakeString (string (_eeab )),_aeb ;

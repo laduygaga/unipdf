@@ -9,7 +9,7 @@
 // Use of this source code is governed by the UniDoc End User License Agreement
 // terms that can be accessed at https://unidoc.io/eula/
 
-package security ;import (_ce "bytes";_a "crypto/aes";_cb "crypto/cipher";_fg "crypto/md5";_fbc "crypto/rand";_g "crypto/rc4";_bg "crypto/sha256";_d "crypto/sha512";_fb "encoding/binary";_f "errors";_ac "fmt";_fa "github.com/unidoc/unipdf/v3/common";_bc "hash";
+package security ;import (_ce "bytes";_a "crypto/aes";_cb "crypto/cipher";_fg "crypto/md5";_fbc "crypto/rand";_g "crypto/rc4";_bg "crypto/sha256";_d "crypto/sha512";_fb "encoding/binary";_f "errors";_ac "fmt";_fa "github.com/laduygaga/unipdf/v3/common";_bc "hash";
 _b "io";_bga "math";);func (_cea stdHandlerR4 )alg6 (_dcc *StdEncryptDict ,_dcdc []byte )([]byte ,error ){var (_eb []byte ;_caa error ;);_ggdc :=_cea .alg2 (_dcc ,_dcdc );if _dcc .R ==2{_eb ,_caa =_cea .alg4 (_ggdc ,_dcdc );}else if _dcc .R >=3{_eb ,_caa =_cea .alg5 (_ggdc ,_dcdc );
 }else {return nil ,_f .New ("\u0069n\u0076\u0061\u006c\u0069\u0064\u0020R");};if _caa !=nil {return nil ,_caa ;};_fa .Log .Trace ("\u0063\u0068\u0065\u0063k:\u0020\u0025\u0020\u0078\u0020\u003d\u003d\u0020\u0025\u0020\u0078\u0020\u003f",string (_eb ),string (_dcc .U ));
 _eba :=_eb ;_ee :=_dcc .U ;if _dcc .R >=3{if len (_eba )> 16{_eba =_eba [0:16];};if len (_ee )> 16{_ee =_ee [0:16];};};if !_ce .Equal (_eba ,_ee ){return nil ,nil ;};return _ggdc ,nil ;};func (_eaeg stdHandlerR4 )alg3Key (R int ,_gbc []byte )[]byte {_cgc :=_fg .New ();

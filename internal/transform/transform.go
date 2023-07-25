@@ -9,7 +9,7 @@
 // Use of this source code is governed by the UniDoc End User License Agreement
 // terms that can be accessed at https://unidoc.io/eula/
 
-package transform ;import (_b "fmt";_e "github.com/unidoc/unipdf/v3/common";_fa "math";);func NewPoint (x ,y float64 )Point {return Point {X :x ,Y :y }};func (_db Matrix )Transform (x ,y float64 )(float64 ,float64 ){_bg :=x *_db [0]+y *_db [3]+_db [6];
+package transform ;import (_b "fmt";_e "github.com/laduygaga/unipdf/v3/common";_fa "math";);func NewPoint (x ,y float64 )Point {return Point {X :x ,Y :y }};func (_db Matrix )Transform (x ,y float64 )(float64 ,float64 ){_bg :=x *_db [0]+y *_db [3]+_db [6];
 _cd :=x *_db [1]+y *_db [4]+_db [7];return _bg ,_cd ;};func (_gbf Point )Rotate (theta float64 )Point {_ded :=_fa .Hypot (_gbf .X ,_gbf .Y );_bad :=_fa .Atan2 (_gbf .Y ,_gbf .X );_aa ,_aad :=_fa .Sincos (_bad +theta /180.0*_fa .Pi );return Point {_ded *_aad ,_ded *_aa };
 };func ScaleMatrix (x ,y float64 )Matrix {return NewMatrix (x ,0,0,y ,0,0)};func (_g Matrix )Translate (tx ,ty float64 )Matrix {return _g .Mult (TranslationMatrix (tx ,ty ))};func (_dfb Matrix )Inverse ()(Matrix ,bool ){_fbd ,_agd :=_dfb [0],_dfb [1];_dg ,_dfa :=_dfb [3],_dfb [4];
 _fc ,_af :=_dfb [6],_dfb [7];_cb :=_fbd *_dfa -_agd *_dg ;if _fa .Abs (_cb )< _afb {return Matrix {},false ;};_egg ,_cf :=_dfa /_cb ,-_agd /_cb ;_dgf ,_aca :=-_dg /_cb ,_fbd /_cb ;_gbg :=-(_egg *_fc +_dgf *_af );_fbb :=-(_cf *_fc +_aca *_af );return NewMatrix (_egg ,_cf ,_dgf ,_aca ,_gbg ,_fbb ),true ;

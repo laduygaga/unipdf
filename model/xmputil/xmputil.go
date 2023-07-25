@@ -10,8 +10,8 @@
 // terms that can be accessed at https://unidoc.io/eula/
 
 // Package xmputil provides abstraction used by the pdf document XMP Metadata.
-package xmputil ;import (_bb "errors";_cd "fmt";_eb "github.com/trimmer-io/go-xmp/models/pdf";_a "github.com/trimmer-io/go-xmp/models/xmp_mm";_c "github.com/trimmer-io/go-xmp/xmp";_dd "github.com/unidoc/unipdf/v3/core";_d "github.com/unidoc/unipdf/v3/internal/timeutils";
-_bbb "github.com/unidoc/unipdf/v3/internal/uuid";_ec "github.com/unidoc/unipdf/v3/model/xmputil/pdfaextension";_g "github.com/unidoc/unipdf/v3/model/xmputil/pdfaid";_f "strconv";_b "time";);
+package xmputil ;import (_bb "errors";_cd "fmt";_eb "github.com/trimmer-io/go-xmp/models/pdf";_a "github.com/trimmer-io/go-xmp/models/xmp_mm";_c "github.com/trimmer-io/go-xmp/xmp";_dd "github.com/laduygaga/unipdf/v3/core";_d "github.com/laduygaga/unipdf/v3/internal/timeutils";
+_bbb "github.com/laduygaga/unipdf/v3/internal/uuid";_ec "github.com/laduygaga/unipdf/v3/model/xmputil/pdfaextension";_g "github.com/laduygaga/unipdf/v3/model/xmputil/pdfaid";_f "strconv";_b "time";);
 
 // PdfInfo is the xmp document pdf info.
 type PdfInfo struct{InfoDict _dd .PdfObject ;PdfVersion string ;Copyright string ;Marked bool ;};

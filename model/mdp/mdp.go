@@ -9,7 +9,7 @@
 // Use of this source code is governed by the UniDoc End User License Agreement
 // terms that can be accessed at https://unidoc.io/eula/
 
-package mdp ;import (_b "errors";_c "fmt";_db "github.com/unidoc/unipdf/v3/core";);func NewDefaultDiffPolicy ()DiffPolicy {return &defaultDiffPolicy {_a :nil ,_bf :&DiffResults {},_ce :0};};
+package mdp ;import (_b "errors";_c "fmt";_db "github.com/laduygaga/unipdf/v3/core";);func NewDefaultDiffPolicy ()DiffPolicy {return &defaultDiffPolicy {_a :nil ,_bf :&DiffResults {},_ce :0};};
 
 // DocMDPPermission is values for set up access permissions for DocMDP.
 // (Section 12.8.2.2, Table 254 - Entries in a signature dictionary p. 471 in PDF32000_2008).

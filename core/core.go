@@ -12,9 +12,9 @@
 // Package core defines and implements the primitive PDF object types in golang, and provides functionality
 // for parsing those from a PDF file stream. This includes I/O handling, cross references, repairs, encryption,
 // encoding and other core capabilities.
-package core ;import (_a "bufio";_gd "bytes";_de "compress/lzw";_bd "compress/zlib";_ff "crypto/md5";_da "crypto/rand";_gg "encoding/hex";_f "errors";_ggg "fmt";_fbc "github.com/unidoc/unipdf/v3/common";_df "github.com/unidoc/unipdf/v3/core/security";_be "github.com/unidoc/unipdf/v3/core/security/crypt";
-_bfd "github.com/unidoc/unipdf/v3/internal/ccittfax";_eef "github.com/unidoc/unipdf/v3/internal/imageutil";_fba "github.com/unidoc/unipdf/v3/internal/jbig2";_eee "github.com/unidoc/unipdf/v3/internal/jbig2/bitmap";_gbd "github.com/unidoc/unipdf/v3/internal/jbig2/decoder";
-_fbd "github.com/unidoc/unipdf/v3/internal/jbig2/document";_ebf "github.com/unidoc/unipdf/v3/internal/jbig2/errors";_bff "github.com/unidoc/unipdf/v3/internal/strutils";_bb "golang.org/x/image/tiff/lzw";_fb "golang.org/x/xerrors";_gc "image";_ca "image/color";
+package core ;import (_a "bufio";_gd "bytes";_de "compress/lzw";_bd "compress/zlib";_ff "crypto/md5";_da "crypto/rand";_gg "encoding/hex";_f "errors";_ggg "fmt";_fbc "github.com/laduygaga/unipdf/v3/common";_df "github.com/laduygaga/unipdf/v3/core/security";_be "github.com/laduygaga/unipdf/v3/core/security/crypt";
+_bfd "github.com/laduygaga/unipdf/v3/internal/ccittfax";_eef "github.com/laduygaga/unipdf/v3/internal/imageutil";_fba "github.com/laduygaga/unipdf/v3/internal/jbig2";_eee "github.com/laduygaga/unipdf/v3/internal/jbig2/bitmap";_gbd "github.com/laduygaga/unipdf/v3/internal/jbig2/decoder";
+_fbd "github.com/laduygaga/unipdf/v3/internal/jbig2/document";_ebf "github.com/laduygaga/unipdf/v3/internal/jbig2/errors";_bff "github.com/laduygaga/unipdf/v3/internal/strutils";_bb "golang.org/x/image/tiff/lzw";_fb "golang.org/x/xerrors";_gc "image";_ca "image/color";
 _eb "image/jpeg";_bf "io";_bc "io/ioutil";_g "reflect";_ee "regexp";_gb "sort";_b "strconv";_bcb "strings";_e "sync";_bcf "time";_c "unicode";);var _fgfc =_ee .MustCompile ("\u0028\u005c\u0064\u002b\u0029\u005c\u0073\u002b\u0028\u005c\u0064+\u0029\u005c\u0073\u002b\u0028\u005b\u006e\u0066\u005d\u0029\\\u0073\u002a\u0024");
 func _bbcb (_dfea _eef .Image )*JBIG2Image {_ceac :=_dfea .Base ();return &JBIG2Image {Data :_ceac .Data ,Width :_ceac .Width ,Height :_ceac .Height ,HasPadding :true };};
 

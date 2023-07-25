@@ -9,7 +9,7 @@
 // Use of this source code is governed by the UniDoc End User License Agreement
 // terms that can be accessed at https://unidoc.io/eula/
 
-package sigutil ;import (_gf "bytes";_f "crypto";_ee "crypto/x509";_fe "encoding/asn1";_cf "encoding/pem";_bd "errors";_ea "fmt";_a "github.com/unidoc/timestamp";_ec "github.com/unidoc/unipdf/v3/common";_cg "golang.org/x/crypto/ocsp";_e "io";_c "io/ioutil";
+package sigutil ;import (_gf "bytes";_f "crypto";_ee "crypto/x509";_fe "encoding/asn1";_cf "encoding/pem";_bd "errors";_ea "fmt";_a "github.com/unidoc/timestamp";_ec "github.com/laduygaga/unipdf/v3/common";_cg "golang.org/x/crypto/ocsp";_e "io";_c "io/ioutil";
 _ba "net/http";_b "time";);
 
 // NewTimestampClient returns a new timestamp client.

@@ -9,7 +9,7 @@
 // Use of this source code is governed by the UniDoc End User License Agreement
 // terms that can be accessed at https://unidoc.io/eula/
 
-package imagerender ;import (_dc "errors";_d "fmt";_ef "github.com/unidoc/freetype/raster";_de "github.com/unidoc/unipdf/v3/common";_g "github.com/unidoc/unipdf/v3/internal/transform";_ae "github.com/unidoc/unipdf/v3/render/internal/context";_ga "golang.org/x/image/draw";
+package imagerender ;import (_dc "errors";_d "fmt";_ef "github.com/unidoc/freetype/raster";_de "github.com/laduygaga/unipdf/v3/common";_g "github.com/laduygaga/unipdf/v3/internal/transform";_ae "github.com/laduygaga/unipdf/v3/render/internal/context";_ga "golang.org/x/image/draw";
 _f "golang.org/x/image/font";_ge "golang.org/x/image/math/f64";_gc "golang.org/x/image/math/fixed";_e "image";_dd "image/color";_af "image/draw";_a "math";_bd "sort";_c "strings";);func (_fgb *Context )CubicTo (x1 ,y1 ,x2 ,y2 ,x3 ,y3 float64 ){if !_fgb ._gae {_fgb .MoveTo (x1 ,y1 );
 };_aab ,_acbc :=_fgb ._cggb .X ,_fgb ._cggb .Y ;x1 ,y1 =_fgb .Transform (x1 ,y1 );x2 ,y2 =_fgb .Transform (x2 ,y2 );x3 ,y3 =_fgb .Transform (x3 ,y3 );_gfb :=_bgg (_aab ,_acbc ,x1 ,y1 ,x2 ,y2 ,x3 ,y3 );_aec :=_cdf (_fgb ._cggb );for _ ,_fad :=range _gfb [1:]{_dbeb :=_cdf (_fad );
 if _dbeb ==_aec {continue ;};_aec =_dbeb ;_fgb ._bdc .Add1 (_dbeb );_fgb ._cd .Add1 (_dbeb );_fgb ._cggb =_fad ;};};func (_ebg *Context )Fill (){_ebg .FillPreserve ();_ebg .ClearPath ()};func NewContextForRGBA (im *_e .RGBA )*Context {_fgda :=im .Bounds ().Size ().X ;

@@ -9,7 +9,7 @@
 // Use of this source code is governed by the UniDoc End User License Agreement
 // terms that can be accessed at https://unidoc.io/eula/
 
-package huffman ;import (_bb "errors";_c "fmt";_b "github.com/unidoc/unipdf/v3/internal/bitwise";_f "github.com/unidoc/unipdf/v3/internal/jbig2/internal";_dd "math";_bc "strings";);func _ece (_ecg ,_bf int32 )int32 {if _ecg > _bf {return _ecg ;};return _bf ;
+package huffman ;import (_bb "errors";_c "fmt";_b "github.com/laduygaga/unipdf/v3/internal/bitwise";_f "github.com/laduygaga/unipdf/v3/internal/jbig2/internal";_dd "math";_bc "strings";);func _ece (_ecg ,_bf int32 )int32 {if _ecg > _bf {return _ecg ;};return _bf ;
 };func _da (_bca *Code )*OutOfBandNode {return &OutOfBandNode {}};func (_aa *StandardTable )RootNode ()*InternalNode {return _aa ._de };func (_dca *FixedSizeTable )String ()string {return _dca ._cg .String ()+"\u000a"};func (_ebg *FixedSizeTable )InitTree (codeTable []*Code )error {_ed (codeTable );
 for _ ,_fe :=range codeTable {_ag :=_ebg ._cg .append (_fe );if _ag !=nil {return _ag ;};};return nil ;};func (_bab *EncodedTable )String ()string {return _bab ._gg .String ()+"\u000a"};var _ Node =&ValueNode {};func (_bbg *FixedSizeTable )RootNode ()*InternalNode {return _bbg ._cg };
 func (_bae *StandardTable )String ()string {return _bae ._de .String ()+"\u000a"};func (_a *EncodedTable )Decode (r *_b .Reader )(int64 ,error ){return _a ._gg .Decode (r )};func (_eee *StandardTable )Decode (r *_b .Reader )(int64 ,error ){return _eee ._de .Decode (r )};

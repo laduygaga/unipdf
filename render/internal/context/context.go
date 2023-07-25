@@ -9,7 +9,7 @@
 // Use of this source code is governed by the UniDoc End User License Agreement
 // terms that can be accessed at https://unidoc.io/eula/
 
-package context ;import (_b "errors";_de "github.com/unidoc/freetype/truetype";_bae "github.com/unidoc/unipdf/v3/core";_e "github.com/unidoc/unipdf/v3/internal/textencoding";_ae "github.com/unidoc/unipdf/v3/internal/transform";_ba "github.com/unidoc/unipdf/v3/model";
+package context ;import (_b "errors";_de "github.com/unidoc/freetype/truetype";_bae "github.com/laduygaga/unipdf/v3/core";_e "github.com/laduygaga/unipdf/v3/internal/textencoding";_ae "github.com/laduygaga/unipdf/v3/internal/transform";_ba "github.com/laduygaga/unipdf/v3/model";
 _gg "golang.org/x/image/font";_d "image";_g "image/color";);func (_gab *TextState )ProcTStar (){_gab .ProcTd (0,-_gab .Tl )};const (LineJoinRound LineJoin =iota ;LineJoinBevel ;);type LineJoin int ;func (_cdac *TextState )ProcTd (tx ,ty float64 ){_cdac .Tlm .Concat (_ae .TranslationMatrix (tx ,ty ));
 _cdac .Tm =_cdac .Tlm .Clone ();};func (_ffg *TextState )ProcQ (data []byte ,ctx Context ){_ffg .ProcTStar ();_ffg .ProcTj (data ,ctx )};type Gradient interface{Pattern ;AddColorStop (_c float64 ,_f _g .Color );};func (_gfa *TextState )ProcTf (font *TextFont ){_gfa .Tf =font };
 func (_bbc *TextFont )BytesToCharcodes (data []byte )[]_e .CharCode {if _bbc ._ec !=nil {return _bbc ._ec .BytesToCharcodes (data );};return _bbc .Font .BytesToCharcodes (data );};func (_dbd *TextFont )WithSize (size float64 ,originalFont *_ba .PdfFont )*TextFont {return &TextFont {Font :_dbd .Font ,Size :size ,_fff :_dbd ._fff ,_ec :originalFont };

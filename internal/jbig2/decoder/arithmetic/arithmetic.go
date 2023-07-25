@@ -9,7 +9,7 @@
 // Use of this source code is governed by the UniDoc End User License Agreement
 // terms that can be accessed at https://unidoc.io/eula/
 
-package arithmetic ;import (_f "fmt";_gb "github.com/unidoc/unipdf/v3/common";_b "github.com/unidoc/unipdf/v3/internal/bitwise";_bd "github.com/unidoc/unipdf/v3/internal/jbig2/internal";_g "io";_cf "strings";);func New (r *_b .Reader )(*Decoder ,error ){_ea :=&Decoder {_cb :r ,ContextSize :[]uint32 {16,13,10,10},ReferedToContextSize :[]uint32 {13,10}};
+package arithmetic ;import (_f "fmt";_gb "github.com/laduygaga/unipdf/v3/common";_b "github.com/laduygaga/unipdf/v3/internal/bitwise";_bd "github.com/laduygaga/unipdf/v3/internal/jbig2/internal";_g "io";_cf "strings";);func New (r *_b .Reader )(*Decoder ,error ){_ea :=&Decoder {_cb :r ,ContextSize :[]uint32 {16,13,10,10},ReferedToContextSize :[]uint32 {13,10}};
 if _ga :=_ea .init ();_ga !=nil {return nil ,_ga ;};return _ea ,nil ;};func (_ff *DecoderStats )setEntry (_agg int ){_cg :=byte (_agg &0x7f);_ff ._fab [_ff ._cfe ]=_cg };func (_ed *Decoder )DecodeIAID (codeLen uint64 ,stats *DecoderStats )(int64 ,error ){_ed ._e =1;
 var _gae uint64 ;for _gae =0;_gae < codeLen ;_gae ++{stats .SetIndex (int32 (_ed ._e ));_ceb ,_gbe :=_ed .DecodeBit (stats );if _gbe !=nil {return 0,_gbe ;};_ed ._e =(_ed ._e <<1)|int64 (_ceb );};_gdg :=_ed ._e -(1<<codeLen );return _gdg ,nil ;};func (_cd *Decoder )DecodeBit (stats *DecoderStats )(int ,error ){var (_bc int ;
 _ef =_ce [stats .cx ()][0];_ag =int32 (stats .cx ()););defer func (){_cd ._gc ++}();_cd ._bf -=_ef ;if (_cd ._fg >>16)< uint64 (_ef ){_bc =_cd .lpsExchange (stats ,_ag ,_ef );if _gd :=_cd .renormalize ();_gd !=nil {return 0,_gd ;};}else {_cd ._fg -=uint64 (_ef )<<16;

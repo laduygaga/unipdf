@@ -9,7 +9,7 @@
 // Use of this source code is governed by the UniDoc End User License Agreement
 // terms that can be accessed at https://unidoc.io/eula/
 
-package pdfutil ;import (_d "github.com/unidoc/unipdf/v3/common";_c "github.com/unidoc/unipdf/v3/contentstream";_dg "github.com/unidoc/unipdf/v3/contentstream/draw";_gbe "github.com/unidoc/unipdf/v3/core";_gb "github.com/unidoc/unipdf/v3/model";);
+package pdfutil ;import (_d "github.com/laduygaga/unipdf/v3/common";_c "github.com/laduygaga/unipdf/v3/contentstream";_dg "github.com/laduygaga/unipdf/v3/contentstream/draw";_gbe "github.com/laduygaga/unipdf/v3/core";_gb "github.com/laduygaga/unipdf/v3/model";);
 
 // NormalizePage performs the following operations on the passed in page:
 // - Normalize the page rotation.

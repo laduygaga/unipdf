@@ -9,7 +9,7 @@
 // Use of this source code is governed by the UniDoc End User License Agreement
 // terms that can be accessed at https://unidoc.io/eula/
 
-package bitwise ;import (_da "encoding/binary";_d "errors";_f "fmt";_b "github.com/unidoc/unipdf/v3/common";_gb "github.com/unidoc/unipdf/v3/internal/jbig2/errors";_gc "io";);func (_efed *Writer )WriteByte (c byte )error {return _efed .writeByte (c )};
+package bitwise ;import (_da "encoding/binary";_d "errors";_f "fmt";_b "github.com/laduygaga/unipdf/v3/common";_gb "github.com/laduygaga/unipdf/v3/internal/jbig2/errors";_gc "io";);func (_efed *Writer )WriteByte (c byte )error {return _efed .writeByte (c )};
 func (_gd *BufferedWriter )FinishByte (){if _gd ._gcc ==0{return ;};_gd ._gcc =0;_gd ._bb ++;};func (_dd *Reader )ReadUint32 ()(uint32 ,error ){_eab :=make ([]byte ,4);_ ,_cfdc :=_dd .Read (_eab );if _cfdc !=nil {return 0,_cfdc ;};return _da .BigEndian .Uint32 (_eab ),nil ;
 };func (_deb *Reader )readBufferByte ()(byte ,error ){if _deb ._ebbg >=int64 (_deb ._ag ._cde ){return 0,_gc .EOF ;};_deb ._gbd =-1;_aec :=_deb ._ag ._bce [int64 (_deb ._ag ._fdg )+_deb ._ebbg ];_deb ._ebbg ++;_deb ._gf =int (_aec );return _aec ,nil ;};
 func (_ddc *Reader )RelativePosition ()int64 {return _ddc ._ebbg };func (_dee *Writer )FinishByte (){if _dee ._bdg ==0{return ;};_dee ._bdg =0;_dee ._daf ++;};func (_aee *BufferedWriter )grow (_ea int ){if _aee ._ae ==nil &&_ea < _a {_aee ._ae =make ([]byte ,_ea ,_a );

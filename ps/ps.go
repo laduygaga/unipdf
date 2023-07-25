@@ -14,7 +14,7 @@
 //
 // Package ps implements various functionalities needed for handling Postscript for PDF uses, in particular
 // for PDF function type 4.
-package ps ;import (_gb "bufio";_g "bytes";_b "errors";_ad "fmt";_c "github.com/unidoc/unipdf/v3/common";_d "github.com/unidoc/unipdf/v3/core";_a "io";_ba "math";);func (_cbag *PSOperand )ln (_fbbf *PSStack )error {_geec ,_gcce :=_fbbf .PopNumberAsFloat64 ();
+package ps ;import (_gb "bufio";_g "bytes";_b "errors";_ad "fmt";_c "github.com/laduygaga/unipdf/v3/common";_d "github.com/laduygaga/unipdf/v3/core";_a "io";_ba "math";);func (_cbag *PSOperand )ln (_fbbf *PSStack )error {_geec ,_gcce :=_fbbf .PopNumberAsFloat64 ();
 if _gcce !=nil {return _gcce ;};_gcg :=_ba .Log (_geec );_gcce =_fbbf .Push (MakeReal (_gcg ));return _gcce ;};func (_f *PSBoolean )DebugString ()string {return _ad .Sprintf ("\u0062o\u006f\u006c\u003a\u0025\u0076",_f .Val );};const _gc =0.000001;func (_bead *PSOperand )neg (_dbeeg *PSStack )error {_ceec ,_cbcd :=_dbeeg .Pop ();
 if _cbcd !=nil {return _cbcd ;};if _eaf ,_aeb :=_ceec .(*PSReal );_aeb {_cbcd =_dbeeg .Push (MakeReal (-_eaf .Val ));return _cbcd ;}else if _agd ,_eag :=_ceec .(*PSInteger );_eag {_cbcd =_dbeeg .Push (MakeInteger (-_agd .Val ));return _cbcd ;}else {return ErrTypeCheck ;
 };};

@@ -14,9 +14,9 @@
 // It is built on top of the model package to provide access to the most common
 // operations such as creating text and image reports and manipulating existing pages.
 //
-package creator ;import (_c "bytes";_e "encoding/xml";_d "errors";_fb "fmt";_g "github.com/gorilla/i18n/linebreak";_ef "github.com/unidoc/unichart/render";_da "github.com/unidoc/unipdf/v3/common";_ebc "github.com/unidoc/unipdf/v3/contentstream";_bg "github.com/unidoc/unipdf/v3/contentstream/draw";
-_dd "github.com/unidoc/unipdf/v3/core";_aeb "github.com/unidoc/unipdf/v3/internal/graphic2d/svg";_aad "github.com/unidoc/unipdf/v3/internal/integrations/unichart";_ga "github.com/unidoc/unipdf/v3/internal/license";_bc "github.com/unidoc/unipdf/v3/internal/transform";
-_fee "github.com/unidoc/unipdf/v3/model";_aa "golang.org/x/text/unicode/bidi";_a "image";_fg "io";_fa "math";_fd "os";_ae "regexp";_b "sort";_fe "strconv";_cf "strings";_ff "text/template";_eb "unicode";);
+package creator ;import (_c "bytes";_e "encoding/xml";_d "errors";_fb "fmt";_g "github.com/gorilla/i18n/linebreak";_ef "github.com/unidoc/unichart/render";_da "github.com/laduygaga/unipdf/v3/common";_ebc "github.com/laduygaga/unipdf/v3/contentstream";_bg "github.com/laduygaga/unipdf/v3/contentstream/draw";
+_dd "github.com/laduygaga/unipdf/v3/core";_aeb "github.com/laduygaga/unipdf/v3/internal/graphic2d/svg";_aad "github.com/laduygaga/unipdf/v3/internal/integrations/unichart";_ga "github.com/laduygaga/unipdf/v3/internal/license";_bc "github.com/laduygaga/unipdf/v3/internal/transform";
+_fee "github.com/laduygaga/unipdf/v3/model";_aa "golang.org/x/text/unicode/bidi";_a "image";_fg "io";_fa "math";_fd "os";_ae "regexp";_b "sort";_fe "strconv";_cf "strings";_ff "text/template";_eb "unicode";);
 
 // Polygon represents a polygon shape.
 // Implements the Drawable interface and can be drawn on PDF using the Creator.
